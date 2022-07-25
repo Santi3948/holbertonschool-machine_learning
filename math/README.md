@@ -1,0 +1,1 @@
+Machine Learning is built on mathematical prerequisites. Mathematics is important for solving the Data Science project, Deep Learning use cases. Mathematics defines the underlying concept behind the algorithms and tells which one is better and why.

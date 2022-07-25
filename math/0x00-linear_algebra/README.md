@@ -1,0 +1,1 @@
+Linear algebra provides the first steps into vectorization, presenting a deeper way of thinking about parallelization. Even the most rudimentary machine learning models like linear regression use these techniques. Such methods are also used in Python libraries such as NumPy, SciPy, Scikit-Learn, Pandas, and Tensorflow.
