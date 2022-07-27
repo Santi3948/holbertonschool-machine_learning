@@ -1,4 +1,8 @@
-import numpy as np
+#!/usr/bin/env python3
+'''Write a function that concatenates two arrays'''
+
+
 def cat_arrays(arr1, arr2):
-    arr_conc = np.concatenate((arr1, arr2))
-    return arr_conc.tolist()
+    ''' concatenates two arrays'''
+    aux = arr1 + arr2
+    return aux
