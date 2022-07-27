@@ -1,7 +1,12 @@
-import numpy as np
+#!/usr/bin/env python3
+'''Write a function that adds two arrays element-wise'''
+
+
 def add_arrays(arr1, arr2):
-    if np.array(arr1).shape != np.array(arr2).shape:
+    '''add arrays'''
+    if len(arr1) != len(arr2):
         return None
-    sum_arr = np.array(arr1) + np.array(arr2)
-    return sum_arr.tolist()
-    
+    new_list = []
+    for item1, item2 in zip(arr1, arr2):
+        new_list.append(item1 + item2)
+    return new_list
