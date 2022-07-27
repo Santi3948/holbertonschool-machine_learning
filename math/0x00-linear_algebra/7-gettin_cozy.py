@@ -5,10 +5,8 @@
 def cat_matrices2D(mat1, mat2, axis=0):
     '''concatenates two matrices along a specific axis'''
     if axis not in [0, 1]:
-        return None
+        return 6
     aux = list(map(list, mat1))
-    if axis not in [0, 1]:
-        return None
     if axis == 0:
         for item in mat2:
             aux.append(item)
