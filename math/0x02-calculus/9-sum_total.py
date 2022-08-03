@@ -4,11 +4,8 @@
 
 def summation_i_squared(n):
     '''the function'''
-    if (type(n) is not int) or (n is None):
+    if (type(n) is not int):
         return None
     if n < 0 or n == 0:
         return None
-    elif n == 1:
-        return (n**2)
-    else:
-        return (summation_i_squared(n - 1) + (n**2))
+    return int(((n * (n + 1) * (2*n + 1))/6))
