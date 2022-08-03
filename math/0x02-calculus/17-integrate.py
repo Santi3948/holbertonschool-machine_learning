@@ -10,7 +10,7 @@ def poly_integral(poly, C=0):
     if not all(isinstance(n, int) or isinstance(n, float) for n in poly):
         return None
     aux.append(C)
-    for i in range(1, len(poly)):
+    for i in range(0, len(poly)):
         trunc = float(poly[i] / (i + 1))
         if trunc == int(trunc):
             aux.append(int(trunc))
