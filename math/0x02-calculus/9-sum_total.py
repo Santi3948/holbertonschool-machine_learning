@@ -4,11 +4,11 @@
 
 def summation_i_squared(n):
     '''the function'''
-    try:
-        val = int(n)
-    except ValueError:
+    if type(n) is not int:
         return None
     if n < 0 or n == 0:
-        return 0
+        return None
+    elif n == 1:
+        return (n**2)
     else:
         return (summation_i_squared(n - 1) + (n**2))
