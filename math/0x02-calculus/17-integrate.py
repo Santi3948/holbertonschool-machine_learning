@@ -5,8 +5,9 @@
 def poly_integral(poly, C=0):
     '''the function'''
     aux = []
-    if (not all(isinstance(n, int) or isinstance(n, float) for n in poly)) \
-            or (type(C) is not int):
+    if (type(C) is not int) or (type(poly) is not list) or (len(poly) == 0):
+        return None
+    if not all(isinstance(n, int) or isinstance(n, float) for n in poly):
         return None
     aux.append(C)
     for i in range(1, len(poly)):
