@@ -5,7 +5,9 @@
 def poly_derivative(poly):
     '''the function'''
     aux = []
-    if (type(poly) is not list) or (not all(isinstance(n, int) or isinstance(n, float) for n in poly)) or (len(poly) == 0):
+    if (type(poly) is not list) or (len(poly) == 0):
+        return None
+    if (not all(isinstance(n, int) or isinstance(n, float) for n in poly)):
         return None
     for i in range(1, len(poly)):
         aux.append(i * poly[i])
