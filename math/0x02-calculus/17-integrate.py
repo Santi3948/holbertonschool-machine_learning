@@ -11,9 +11,9 @@ def poly_integral(poly, C=0):
         return None
     aux.append(C)
     for i in range(1, len(poly)):
-        trunc = float(poly[i]) / float(i + 1)
+        trunc = float(poly[i] / (i + 1))
         if trunc == int(trunc):
             aux.append(int(trunc))
         else:
-            aux.append(float(poly[i]) / float(i + 1))
+            aux.append(trunc)
     return aux
