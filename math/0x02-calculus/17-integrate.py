@@ -18,4 +18,8 @@ def poly_integral(poly, C=0):
             aux.append(int(trunc))
         else:
             aux.append(trunc)
+    for j in range(len(aux) - 1, 0, -1):
+        if aux[j] != 0:
+            break
+        aux.pop(j)
     return aux
