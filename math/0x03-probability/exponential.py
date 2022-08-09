@@ -35,8 +35,6 @@ class Exponential:
 
     def pdf(self, x):
         """Calculates the value of the PMF for a given number of “successes”"""
-        if type(x) is not int:
-            x = int(x)
         if x < 0:
             return 0
         return (self.lambtha * (self.e ** (-self.lambtha * x)))
