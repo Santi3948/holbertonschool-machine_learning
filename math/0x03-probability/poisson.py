@@ -29,7 +29,7 @@ class Poisson:
 
     def factorial(self, x):
         """factorial function"""
-        if x == 1:
+        if x == 0:
             return 1
         return (self.factorial(x - 1) * x)
 
@@ -44,4 +44,7 @@ class Poisson:
 
     def cdf(self, k):
         """Calculates the value of the CDF for a given number of “successes”"""
-        return 1
+        aux = 0
+        for i in range(k+1):
+            aux += self.pmf(i)
+        return aux
