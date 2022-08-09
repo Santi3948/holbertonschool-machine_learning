@@ -1,5 +1,11 @@
+#!/usr/bin/env python3
+"""0. Initialize Poisson"""
+
+
 class Poisson:
+    """class Poisson that represents a poisson distribution"""
     def __init__(self, data=None, lambtha=1.):
+        """Class contructor"""
         if data:
             if type(data) is not list:
                 raise TypeError("data must be a list")
