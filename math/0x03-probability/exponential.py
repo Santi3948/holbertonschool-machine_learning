@@ -4,6 +4,9 @@
 
 class Exponential:
     """Exponential that represents an exponential distribution"""
+
+    e = 2.7182818285
+
     def __init__(self, data=None, lambtha=1.):
         """Class contructor"""
         if data or data is not None:
@@ -23,3 +26,18 @@ class Exponential:
             if lambtha <= 0:
                 raise ValueError("lambtha must be a positive value")
             self.lambtha = float(lambtha)
+
+    def factorial(self, x):
+        """factorial function"""
+        if x == 0:
+            return 1
+        return (self.factorial(x - 1) * x)
+
+    def pdf(self, x):
+        """Calculates the value of the PMF for a given number of “successes”"""
+        if type(x) is not int:
+            x = int(x)
+        if x < 0:
+            return 0
+        return ((self.e ** (-self.lambtha)) * ((self.lambtha) ** x)
+                / self.factorial(x))
