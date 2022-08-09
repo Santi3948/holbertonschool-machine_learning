@@ -22,4 +22,4 @@ class Exponential:
         else:
             if lambtha <= 0:
                 raise ValueError("lambtha must be a positive value")
-            self.lambtha = float(1/lambtha)
+            self.lambtha = float(lambtha)
