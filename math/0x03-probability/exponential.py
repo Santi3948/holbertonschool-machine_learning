@@ -39,5 +39,4 @@ class Exponential:
             x = int(x)
         if x < 0:
             return 0
-        return ((self.e ** (-self.lambtha)) * ((self.lambtha) ** x)
-                / self.factorial(x))
+        return (self.lambtha * (self.e ** (-self.lambtha * x)))
