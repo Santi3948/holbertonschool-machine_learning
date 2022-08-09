@@ -4,6 +4,10 @@
 
 class Normal:
     """class Normal that represents a normal distribution"""
+
+    π = 3.1415926536
+    e = 2.7182818285
+
     def __init__(self, data=None, mean=0., stddev=1.):
         """Class contructor"""
         if data or data is not None:
@@ -45,3 +49,8 @@ class Normal:
     def x_value(self, z):
         """Calculates the x-value of a given z-score"""
         return ((self.stddev * z) + self.mean)
+
+    def pdf(self, x):
+        """Calculates the value of the PDF for a given x-value"""
+        return ((1/(self.stddev * self.heron(2 * self.π))) *
+                (self.e ** ((-1/2) * (((x - self.mean) / self.stddev)) ** 2)))
