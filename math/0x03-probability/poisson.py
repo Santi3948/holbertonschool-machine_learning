@@ -4,6 +4,9 @@
 
 class Poisson:
     """class Poisson that represents a poisson distribution"""
+
+    e = 2.7182818285
+
     def __init__(self, data=None, lambtha=1.):
         """Class contructor"""
         if data:
@@ -16,8 +19,24 @@ class Poisson:
             for item in data:
                 i += 1
                 aux += item
+            if float(aux/i) <= 0:
+                raise ValueError("lambtha must be a positive value")
             self.lambtha = float(aux/i)
         else:
             if lambtha <= 0:
                 raise ValueError("lambtha must be a positive value")
             self.lambtha = float(lambtha)
+    
+    def factorial(self, x):
+        """factorial function"""
+        if x == 1:
+            return 1
+        return (self.factorial(x - 1) * x)
+    
+    def pmf(self, k):
+        """Class contructor"""
+        if type(k) is not int:
+            k = int(k)
+        if k < 0:
+            return 0
+        return ((self.e ** (-self.lambtha)) * ((self.lambtha) ** k)/self.factorial(k))
