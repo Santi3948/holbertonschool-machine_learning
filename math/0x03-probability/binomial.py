@@ -8,6 +8,10 @@ class Binomial:
     def __init__(self, data=None, n=1, p=0.5):
         """Class contructor"""
         if data or data is not None:
+            if type(data) is not list:
+                raise TypeError("data must be a list")
+            if len(data) < 2:
+                raise ValueError("data must contain multiple values")
             aux = 0
             i = 0
             aux2 = 0
