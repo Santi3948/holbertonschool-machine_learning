@@ -23,7 +23,7 @@ class Binomial:
                 aux2 += (item2 - m) ** 2
             x = aux2 / i
             self.p = float(1 - (x / m))
-            self.n = round(m / self.p)
+            self.n = int(m / self.p)
             self.p = float(m / self.n)
         else:
             if n <= 0:
