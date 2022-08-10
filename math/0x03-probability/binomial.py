@@ -47,4 +47,4 @@ class Binomial:
             return 0
         com = self.factorial(self.n) / (self.factorial
                                         (self.n - k) * self.factorial(k))
-        return com * (self.p ** k) * ((1 - self.p) ** (self.n - k))
+        return (com * (self.p ** k) * ((1 - self.p) ** (self.n - k)))
