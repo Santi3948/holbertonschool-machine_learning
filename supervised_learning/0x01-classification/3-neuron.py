@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import numpy as np
-"""Write a class Neuron that defines a single neuron performing binary classification"""
+"""Write a class Neuron that defines a single
+   neuron performing binary classification"""
 
 
 class Neuron:
@@ -38,4 +39,5 @@ class Neuron:
 
     def cost(self, Y, A):
         """Calculates the cost of the model using logistic regression"""
-        return ((-1/Y.shape[1]) * (np.sum( np.matmul(Y, np.log(A).transpose()) + np.matmul((1-Y), np.log(1.0000001-A).transpose()))))
+        return ((-1/Y.shape[1]) * (np.sum(np.matmul(Y, np.log(A).transpose())
+                + np.matmul((1-Y), np.log(1.0000001-A).transpose()))))
