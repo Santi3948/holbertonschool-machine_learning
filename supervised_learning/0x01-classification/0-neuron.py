@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-import numpy as np
 """Write a class Neuron that defines a
    single neuron performing binary classification
 """
+import numpy as np
 
 
 class Neuron:
