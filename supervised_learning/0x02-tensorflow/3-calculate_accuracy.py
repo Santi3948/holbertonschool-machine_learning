@@ -6,4 +6,6 @@ create_layer = __import__('1-create_layer').create_layer
 
 def calculate_accuracy(y, y_pred):
     """calculates the accuracy of a prediction"""
-    return tf.reduce_mean(y / y_pred)
+    equal = tf.equal(tf.argmax(y, 1), tf.argmax(y_pred, 1))
+    accuracy = tf.reduce_mean(tf.cast(equal, tf.float32))
+    return accuracy
