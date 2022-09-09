@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """regularization of a model"""
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 
 def l2_reg_create_layer(prev, n, activation, lambtha):
